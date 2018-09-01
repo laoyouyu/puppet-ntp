@@ -48,7 +48,7 @@ class ntp(
   String $config_name         = $ntp::params::config_name, 
   String $config_file_mode    = $ntp::params::config_file_mode, 
   Array[String] $ntpservers   = $ntp::params::ntpservers, 
-  String $service_ensure      = $ntp::params::service_ensure, 
+  Boolean $service_ensure      = $ntp::params::service_ensure, 
   String $service_name        = $ntp::params::service_name, 
   Boolean $service_enable     = $ntp::params::service_enable,
   Boolean $service_hasrestart = $ntp::params::service_hasrestart,
