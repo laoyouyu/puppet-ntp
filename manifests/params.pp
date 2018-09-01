@@ -6,10 +6,11 @@ class ntp::params {
   $ntpservers = ['0.centos.pool.ntp.org', '1.centos.pool.ntp.org']
   $service_ensure = 'running'
   $service_enable = true
-  $service_hasrestarts = true
+  $service_hasrestart = true
   $service_hasstatus  = true
   $service_name = $facts['os']['family'] ? {
      'Debian' => 'ntp',
-     defautl  => 'ntpd',
+     'Redhat' => 'ntpd',
+     default  => 'ntpd',
   }
 }
